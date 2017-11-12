@@ -1,0 +1,10 @@
+# Mac-specific files
+.DS_Store
+
+# Virtualenv
+.current_version_requirements
+virtualenv/
+
+# Python temporary files
+*.pyc
+*.pyo

@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    environment:
+      - DEBUG=True
+      - FLASK_DEBUG=True
+      - PYTHONUSERBASE=/app/virtualenv
+      # - POSTGRES_USER=app_user
+      # - POSTGRES_PASSWORD=apppass
+      # - POSTGRES_DB=app
+    command: python run.py
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:5000"
+    # depends_on:
+    #   - postgresql
+    extra_hosts:
+    - localhost:172.17.0.1
+#   postgresql:
+#     image: postgres:9.6
+#     environment:
+#       - POSTGRES_USER=app_user
+#       - POSTGRES_PASSWORD=apppass
+#       - POSTGRES_DB=app
+#     volumes:
+#       - pgdata:/var/lib/postgresql/data
+#     ports:
+#       - "5432:5432"
+#     logging:
+#       driver: none
+# 
+# volumes:
+#   pgdata:
