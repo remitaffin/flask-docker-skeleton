@@ -19,7 +19,7 @@ CURRENT_VERSION=$( docker-compose run -T --no-deps app bash -c "md5sum $ROOT/req
 if [[ "$CURRENT_VERSION" != "$INSTALLED_VERSION" ]] || \
    $(docker-compose run -T --no-deps app bash -c "[[ ! -d '$VENV' ]] && echo true || echo false"); then
   printf "Resetting virtualenv to $CURRENT_VERSION...\n"
-  docker-compose run --no-deps app bash -c "rm -rf $VENV && virtualenv $VENV && pip install --user -r $ROOT/requirements.txt"
+  docker-compose run --no-deps app bash -c "rm -rf $VENV && virtualenv -p python3.6 $VENV && pip install --user -r $ROOT/requirements.txt"
   docker-compose run --no-deps app bash -c "echo $CURRENT_VERSION > $VERSIONFILE"
 else
   printf "Virtualenv is up to date.\n"

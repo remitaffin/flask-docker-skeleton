@@ -6,5 +6,6 @@
 virtualenv/
 
 # Python temporary files
+__pycache__
 *.pyc
 *.pyo
