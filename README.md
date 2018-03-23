@@ -1,5 +1,5 @@
 # python-docker-skeleton
-Skeleton project to run a Flask/Django in docker in just seconds
+Skeleton project to run a Flask in docker in just seconds
 on Linux or MacOS.
 
 ## Get started
