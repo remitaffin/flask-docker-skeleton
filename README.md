@@ -1,4 +1,4 @@
-# python-docker-skeleton
+# flask-docker-skeleton
 Skeleton project to run a Flask in docker in just seconds
 on Linux or MacOS.
 
@@ -28,7 +28,7 @@ On Ubuntu/Debian:
 ## Start your new project
 
 1. Copy this project's code in another directory:
-   `cp -R ./python-docker-skeleton ./new_github_project`
+   `cp -R ./flask-docker-skeleton ./new_github_project`
 2. Run `./create_app.sh yourapplication` (Pick the name wisely)
 3. Run `docker-compose up` to start your containers
 4. Go to http://localhost:8000
